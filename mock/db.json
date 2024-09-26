@@ -1,0 +1,72 @@
+{
+  "suppliers": [
+    {
+      "addressReference": "Near the bakery",
+      "addressNumber": 123,
+      "address": "Asa Norte",
+      "addressCity": "Brasília",
+      "addressState": "DF",
+      "addressCep": "12345-678",
+      "contacts": [
+        {
+          "name": "Contact Name 1",
+          "number": "(61) 98765-4321"
+        }
+      ],
+      "description": "Description 1",
+      "name": "Taylor Nation",
+      "id": "1"
+    },
+    {
+      "addressReference": "Near the mall",
+      "addressNumber": 789,
+      "address": "Paulista Avenue",
+      "addressCity": "São Paulo",
+      "addressState": "SP",
+      "addressCep": "12345-678",
+      "contacts": [
+        {
+          "name": "Contact Name 2",
+          "number": "(11) 98765-4321"
+        }
+      ],
+      "description": "Description 2",
+      "name": "Taylor Swift",
+      "id": "2"
+    },
+    {
+      "id": "185",
+      "addressReference": "Near the mall",
+      "addressNumber": 11,
+      "address": "Rodovia DF-425",
+      "addressCity": "Brasília",
+      "addressState": "DF",
+      "addressCep": "73092-912",
+      "contacts": [
+        {
+          "name": "Maria",
+          "number": "(61) 99300-0082"
+        }
+      ],
+      "description": "teste 2",
+      "name": "Teste 2"
+    },
+    {
+      "id": "500",
+      "addressReference": "Em frente a Moema",
+      "addressNumber": 11,
+      "address": "Rodovia DF-425",
+      "addressCity": "Brasília",
+      "addressState": "DF",
+      "addressCep": "73092-912",
+      "contacts": [
+        {
+          "name": "Maria",
+          "number": "(61) 99300-0082"
+        }
+      ],
+      "description": "Maquinas de Lavar",
+      "name": "Maria Emilia de Castro Oliveira Peres"
+    }
+  ]
+}
