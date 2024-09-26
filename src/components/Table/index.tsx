@@ -27,8 +27,8 @@ const Table = ({ suppliers, searchQuery, handleDelete }: TableProps) => {
       <TableHeader>
         <TableRow>
           <TableHeaderCell>Nome</TableHeaderCell>
-          <TableHeaderCell>Descricao</TableHeaderCell>
-          <TableHeaderCell>Endereco</TableHeaderCell>
+          <TableHeaderCell>Descrição</TableHeaderCell>
+          <TableHeaderCell>Endereço</TableHeaderCell>
           <TableHeaderCell>Ações</TableHeaderCell>
         </TableRow>
       </TableHeader>
@@ -36,9 +36,11 @@ const Table = ({ suppliers, searchQuery, handleDelete }: TableProps) => {
         {filteredSuppliers &&
           filteredSuppliers.map((supplier: Supplier) => (
             <TableRow key={supplier.id}>
-              <TableCell>{supplier.name}</TableCell>
-              <TableCell>{supplier.description}</TableCell>
-              <TableCell>
+              <TableCell data-cell="Nome">{supplier.name}</TableCell>
+              <TableCell data-cell="Descrição">
+                {supplier.description}
+              </TableCell>
+              <TableCell data-cell="Endereço">
                 {supplier.address} - {supplier.addressNumber} -{" "}
                 {supplier.addressCity} - {supplier.addressState} -{" "}
                 {supplier.addressCep} - {supplier.addressReference}

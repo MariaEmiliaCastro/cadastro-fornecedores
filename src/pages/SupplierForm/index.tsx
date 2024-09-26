@@ -1,6 +1,7 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useEffect, useState } from "react";
 import { useFieldArray, useForm } from "react-hook-form";
+import { MdDelete } from "react-icons/md";
 import { useParams } from "react-router-dom";
 import Button from "../../components/Button";
 import Field from "../../components/Field";
@@ -52,7 +53,6 @@ const SupplierForm = () => {
   }, [reset]);
 
   const handleCepInfo = async (cep: string) => {
-    console.log(cep);
     const formattedCep = cep.replace("-", "");
     if (formattedCep.length !== 8) return;
 
@@ -117,6 +117,7 @@ const SupplierForm = () => {
             />
             <Button
               type="button"
+              icon={<MdDelete />}
               disabled={fields.length === 1}
               onClick={() => remove(index)}
               variant="delete"

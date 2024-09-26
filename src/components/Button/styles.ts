@@ -27,6 +27,7 @@ export const ButtonWrapper = styled.button<{ rounded: number }>`
     text-decoration: underline;
     padding: 0;
     color: #4ac0ff;
+    display: inline;
   }
 
   &.button--delete {

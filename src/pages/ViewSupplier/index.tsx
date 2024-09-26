@@ -74,7 +74,15 @@ const ViewSupplier = () => {
                   ? supplier.contacts.map((contact, index) => (
                       <div key={index}>
                         <p>
-                          {contact.name} - {contact.number}
+                          {contact.name} -{" "}
+                          <Button
+                            text={contact.number}
+                            href={`https://wa.me/${contact.number.replace(
+                              /[^\d]/g,
+                              ""
+                            )}`}
+                            variant="link"
+                          />
                         </p>
                       </div>
                     ))

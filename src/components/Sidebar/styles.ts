@@ -14,4 +14,12 @@ export const SidebarWrapper = styled.div`
   justify-content: center;
   gap: 24px;
   white-space: nowrap;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 12px;
+    height: 60px;
+  }
 `;

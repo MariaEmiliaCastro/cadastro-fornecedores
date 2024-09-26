@@ -24,6 +24,19 @@ export const HomeWrapper = styled.div`
     gap: 16px;
     width: 100%;
   }
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 60px;
+
+    h1 {
+      font-size: 32px;
+    }
+
+    > div {
+      overflow-x: auto;
+    }
+  }
 `;
 
 export const SearchInput = styled.input`

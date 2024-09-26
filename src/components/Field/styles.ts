@@ -7,7 +7,7 @@ export const FieldWrapper = styled.div`
   width: 100%;
 
   label {
-    font-size: 20px;
+    font-size: 16px;
     color: #003b75;
   }
 

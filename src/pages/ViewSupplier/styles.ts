@@ -17,13 +17,24 @@ export const ViewSupplierWrapper = styled.div`
     color: #666666;
     margin-bottom: 32px;
   }
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 60px;
+
+    h1 {
+      font-size: 32px;
+    }
+  }
 `;
 
 export const FieldsWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: start;
   gap: 16px;
   margin-bottom: 32px;
+  width: 100%;
 `;
 
 export const FieldName = styled.p`
@@ -33,7 +44,7 @@ export const FieldName = styled.p`
 `;
 
 export const FieldValue = styled.p`
-  font-size: 14px;
+  font-size: 16px;
   color: #666666;
 `;
 
