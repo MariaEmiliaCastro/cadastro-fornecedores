@@ -1,50 +1,54 @@
-# React + TypeScript + Vite
+# Cadastro de Fornecedores
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é um sistema de cadastro de fornecedores construído com React, TypeScript e Firebase. Ele permite que os usuários registrem, visualizem e gerenciem fornecedores.
 
-Currently, two official plugins are available:
+## Índice
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Cadastro de Fornecedores](#cadastro-de-fornecedores)
+  - [Índice](#índice)
+  - [Funcionalidades](#funcionalidades)
+  - [Instalação](#instalação)
+  - [Uso](#uso)
+    - [Desenvolvimento](#desenvolvimento)
+    - [Build](#build)
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Autenticação de usuário com Firebase
+- Cadastro de fornecedores
+- Gerenciamento de fornecedores
+- Design responsivo
+- Notificações com Toast
 
-- Configure the top-level `parserOptions` property like this:
+## Instalação
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clone o repositório:
+   ```sh
+   git clone https://github.com/seuusuario/cadastro-fornecedores.git
+   ```
+2. Navegue até o diretório do projeto:
+   ```sh
+   cd cadastro-fornecedores
+   ```
+3. Instale as dependências:
+   ```sh
+   npm install
+   ```
+
+## Uso
+
+### Desenvolvimento
+
+Para iniciar o servidor de desenvolvimento, execute:
+
+```sh
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Build
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Para construir o projeto, execute:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```sh
+npm run build
 ```

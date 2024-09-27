@@ -23,10 +23,13 @@ const useCreateSupplier = (): UseCreateSupplierResult => {
 
     try {
       const randomId = Math.floor(Math.random() * 1000);
-      await axios.post("http://localhost:3000/suppliers", {
-        ...supplier,
-        id: randomId.toString(),
-      });
+      await axios.post(
+        `${import.meta.env.VITE_REACT_JSON_SERVER_URL}/suppliers`,
+        {
+          ...supplier,
+          id: randomId.toString(),
+        }
+      );
       toast.success("Fornecedor cadastrado com sucesso!");
       navigate("/");
     } catch (err) {

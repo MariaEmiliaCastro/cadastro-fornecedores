@@ -1,13 +1,14 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
+console.log(import.meta.env.VITE_FIREBASE_API_KEY);
 const firebaseConfig = {
-  apiKey: "AIzaSyCqmnovwoJmXdliuB5RexpGV-Cf173yugM",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "cadastro-fornecedores-5cbd9.firebaseapp.com",
   projectId: "cadastro-fornecedores-5cbd9",
   storageBucket: "cadastro-fornecedores-5cbd9.appspot.com",
   messagingSenderId: "767740109995",
-  appId: "1:767740109995:web:1f3b62d39af950beed83ee",
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
   measurementId: "G-JBD5GZMDMP",
 };
 

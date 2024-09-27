@@ -18,7 +18,7 @@ const useUpdateSupplier = () => {
 
     try {
       await axios.put(
-        `http://localhost:3000/suppliers/${supplierId}`,
+        `${import.meta.env.VITE_REACT_JSON_SERVER_URL}/suppliers/${supplierId}`,
         updatedData
       );
       setLoading(false);

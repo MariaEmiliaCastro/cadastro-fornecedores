@@ -20,7 +20,7 @@ const Sidebar = () => {
         <Link to="/supplier">
           <Button
             icon={<MdEdit />}
-            text="Cadastrar fornecedores"
+            text="Cadastrar fornecedor"
             onClick={() => {}}
             variant="secondary"
           />

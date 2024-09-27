@@ -9,7 +9,7 @@ const useGetSingleSupplier = () => {
     const fetchSupplier = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/suppliers/${id}`
+          `${import.meta.env.VITE_REACT_JSON_SERVER_URL}/suppliers/${id}`
         );
 
         return response.data;

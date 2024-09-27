@@ -16,7 +16,9 @@ const useDeleteSupplier = (): UseDeleteSupplierResult => {
     setIsLoading(true);
     setError(null);
     try {
-      await axios.delete(`http://localhost:3000/suppliers/${id}`);
+      await axios.delete(
+        `${import.meta.env.VITE_REACT_JSON_SERVER_URL}/suppliers/${id}`
+      );
       toast.success("Fornecedor deletado com sucesso!");
     } catch (err) {
       toast.error("Erro ao deletar fornecedor!");

@@ -16,7 +16,9 @@ const useGetSuppliers = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/suppliers");
+        const response = await fetch(
+          `${import.meta.env.VITE_REACT_JSON_SERVER_URL}/suppliers`
+        );
         const data = await response.json();
         setData(data);
       } catch (error) {

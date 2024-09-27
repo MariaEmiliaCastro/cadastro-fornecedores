@@ -15,11 +15,32 @@ export const SidebarWrapper = styled.div`
   gap: 24px;
   white-space: nowrap;
 
+  div:last-child {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+  }
+
   @media (max-width: 768px) {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
     padding: 12px;
     height: 60px;
+
+    div {
+      display: flex;
+      gap: 12px;
+    }
+
+    div:last-child {
+      position: static;
+    }
+  }
+
+  @media (max-width: 425px) {
+    div {
+      gap: 0;
+    }
   }
 `;
