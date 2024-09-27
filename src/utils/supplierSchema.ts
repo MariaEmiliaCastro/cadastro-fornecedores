@@ -5,7 +5,7 @@ export const supplierSchema: yup.ObjectSchema<Omit<Supplier, "id">> = yup
   .object()
   .shape({
     name: yup.string().required("Nome é obrigatório"),
-    description: yup.string().required("Descrição é obrigatória"),
+    description: yup.string(),
     contacts: yup
       .array()
       .of(
@@ -33,5 +33,5 @@ export const supplierSchema: yup.ObjectSchema<Omit<Supplier, "id">> = yup
     addressCity: yup.string().required("Cidade é obrigatória"),
     address: yup.string().required("Logradouro é obrigatório"),
     addressNumber: yup.number().required("Número é obrigatório"),
-    addressReference: yup.string().required("Referência é obrigatória"),
+    addressReference: yup.string(),
   });
