@@ -42,7 +42,7 @@ Este projeto é um sistema de cadastro de fornecedores construído com React, Ty
 Para iniciar o servidor de desenvolvimento, execute:
 
 ```sh
-npm run dev
+npx json-server ./mock/db.json && npm run dev
 ```
 
 ### Build
