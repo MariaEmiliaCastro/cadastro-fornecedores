@@ -9,6 +9,7 @@ export type ButtonProps = {
   variant: "primary" | "secondary" | "delete" | "link";
   disabled?: boolean;
   href?: string;
+  openInNewTab?: boolean;
   onClick?: () => void;
 };
 
@@ -21,6 +22,7 @@ const Button = ({
   type,
   disabled = false,
   href,
+  openInNewTab,
   onClick,
 }: ButtonProps) => {
   return (
@@ -33,7 +35,7 @@ const Button = ({
       className={`button button--${variant} button--disabled-${disabled}`}
       type={type}
       href={href ? href : undefined}
-      target="_blank"
+      target={openInNewTab ? "_blank" : undefined}
     >
       {icon}
       {text}

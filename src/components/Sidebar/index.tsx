@@ -1,9 +1,11 @@
 import { MdEdit, MdHome } from "react-icons/md";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { auth } from "../../firebase/firebase";
 import Button from "../Button";
 import { SidebarWrapper } from "./styles";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
   return (
     <SidebarWrapper>
       <Link to="/">
@@ -22,6 +24,16 @@ const Sidebar = () => {
           variant="secondary"
         />
       </Link>
+      <div>
+        <Button
+          text="Sair"
+          onClick={() => {
+            auth.signOut();
+            navigate("/login");
+          }}
+          variant="delete"
+        />
+      </div>
     </SidebarWrapper>
   );
 };

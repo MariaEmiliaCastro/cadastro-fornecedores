@@ -10,3 +10,15 @@ export type Supplier = {
   addressNumber: number;
   addressReference: string;
 };
+
+export type Login = {
+  email: string;
+  password: string;
+};
+
+export type Register = {
+  name: string;
+  email: string;
+  password: string;
+  confirmPassword: string;
+};

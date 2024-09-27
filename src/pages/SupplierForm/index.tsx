@@ -11,7 +11,7 @@ import useGetCepInfo from "../../hooks/useGetCepInfo";
 import useGetSingleSupplier from "../../hooks/useGetSingleSupplier";
 import useUpdateSupplier from "../../hooks/useUpdateSupplier";
 import { Supplier } from "../../types";
-import { supplierSchema } from "../../utils/validateAddSupplier";
+import { supplierSchema } from "../../utils/supplierSchema";
 import { AddSupplierWrapper, Form } from "./styles";
 
 const SupplierForm = () => {
