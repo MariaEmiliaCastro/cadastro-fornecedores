@@ -29,10 +29,8 @@ const Register = () => {
   }: Partial<RegisterType>) => {
     if (!isLogging) {
       setIsLogging(true);
-      console.log("Chegou aqui 1");
       await createUserWithEmailAndPassword(auth, email!, password!).then(
         (userCredential) => {
-          console.log("Chegou aqui 2");
           const user = userCredential.user;
           if (user) {
             if (auth.currentUser) {

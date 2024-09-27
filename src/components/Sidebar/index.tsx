@@ -8,22 +8,24 @@ const Sidebar = () => {
   const navigate = useNavigate();
   return (
     <SidebarWrapper>
-      <Link to="/">
-        <Button
-          icon={<MdHome />}
-          text="Home"
-          onClick={() => {}}
-          variant="secondary"
-        />
-      </Link>
-      <Link to="/supplier">
-        <Button
-          icon={<MdEdit />}
-          text="Cadastrar fornecedores"
-          onClick={() => {}}
-          variant="secondary"
-        />
-      </Link>
+      <div>
+        <Link to="/">
+          <Button
+            icon={<MdHome />}
+            text="Home"
+            onClick={() => {}}
+            variant="secondary"
+          />
+        </Link>
+        <Link to="/supplier">
+          <Button
+            icon={<MdEdit />}
+            text="Cadastrar fornecedores"
+            onClick={() => {}}
+            variant="secondary"
+          />
+        </Link>
+      </div>
       <div>
         <Button
           text="Sair"
