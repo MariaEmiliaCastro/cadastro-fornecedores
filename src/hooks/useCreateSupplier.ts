@@ -33,7 +33,11 @@ const useCreateSupplier = (): UseCreateSupplierResult => {
       toast.success("Fornecedor cadastrado com sucesso!");
       navigate("/");
     } catch (err) {
-      toast.error("Erro ao cadastrar fornecedor: ", err.message);
+      if (err instanceof Error) {
+        toast.error(`Erro ao cadastrar fornecedor: ${err.message}`);
+        return;
+      }
+      toast.error("Erro ao cadastrar fornecedor");
     } finally {
       setLoading(false);
     }

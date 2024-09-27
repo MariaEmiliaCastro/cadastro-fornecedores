@@ -49,7 +49,7 @@ const ViewSupplier = () => {
     });
   };
 
-  const fields = [
+  const fields: { label: string; key: keyof Supplier }[] = [
     { label: "Nome", key: "name" },
     { label: "Descrição", key: "description" },
     { label: "Endereço", key: "address" },

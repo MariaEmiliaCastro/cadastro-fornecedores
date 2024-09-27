@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const useGetSingleSupplier = () => {
   const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
 
   const getSingleSupplier = (id: string) => {
     const fetchSupplier = async () => {
@@ -14,7 +14,11 @@ const useGetSingleSupplier = () => {
 
         return response.data;
       } catch (err) {
-        setError(err.message);
+        if (err instanceof Error) {
+          toast.error(`Erro ao cadastrar fornecedor: ${err.message}`);
+          return;
+        }
+        toast.error("Erro ao cadastrar fornecedor");
       } finally {
         setLoading(false);
       }
@@ -23,7 +27,7 @@ const useGetSingleSupplier = () => {
     return fetchSupplier();
   };
 
-  return { getSingleSupplier, loading, error };
+  return { getSingleSupplier, loading };
 };
 
 export default useGetSingleSupplier;

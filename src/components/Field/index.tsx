@@ -28,7 +28,7 @@ function Field({
     <FieldWrapper>
       {label && <label htmlFor={fieldId}>{label}</label>}
       {type === FieldTypes.SELECT ? (
-        <select id={name} {...register(name)}>
+        <select id={name} {...register(name as keyof Supplier)}>
           {options?.map((option) => (
             <option key={option.value} value={option.value}>
               {option.label}
@@ -39,7 +39,7 @@ function Field({
         <input
           type={type}
           id={fieldId}
-          {...register(name)}
+          {...register(name as keyof Supplier)}
           onChange={onChange}
         />
       )}

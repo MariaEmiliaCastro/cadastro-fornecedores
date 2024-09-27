@@ -6,7 +6,6 @@ import { Supplier } from "../types";
 
 const useUpdateSupplier = () => {
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
 
   const updateSupplier = async (
@@ -14,7 +13,6 @@ const useUpdateSupplier = () => {
     updatedData: Partial<Supplier>
   ) => {
     setLoading(true);
-    setError(null);
 
     try {
       await axios.put(
@@ -26,11 +24,15 @@ const useUpdateSupplier = () => {
       navigate("/");
     } catch (err) {
       setLoading(false);
-      toast.error("Erro ao atualizar fornecedor!", err.message);
+      if (err instanceof Error) {
+        toast.error(`Erro ao cadastrar fornecedor: ${err.message}`);
+        return;
+      }
+      toast.error("Erro ao cadastrar fornecedor");
     }
   };
 
-  return { updateSupplier, loading, error };
+  return { updateSupplier, loading };
 };
 
 export default useUpdateSupplier;
